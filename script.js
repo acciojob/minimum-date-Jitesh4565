@@ -1,5 +1,8 @@
 function minDate(dates) {
   //write you code here
+	let dateObjects=dates.map(dates=> new Date(dates));
+	let earliestDate=dateObjects.reduce((earliest,current)=>(current<earliest?current:earliest));
+	return earliestDate;
 }
 
 // Do not change the code
@@ -37,4 +40,4 @@ var dates = [
   "2023/03/30",
 ];
 
-alert(minDate(dates));
+//alert(minDate(dates));
